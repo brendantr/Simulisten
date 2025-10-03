@@ -90,13 +90,13 @@ class AudioManager: ObservableObject {
     var musicTimer: Timer?
 
     init() {
-        if let url1 = Bundle.main.url(forResource: "book", withExtension: "mp3") {
+        if let url1 = Bundle.main.url(forResource: "book1", withExtension: "mp3") {
             bookPlayer = try? AVAudioPlayer(contentsOf: url1)
             bookPlayer?.prepareToPlay()
             bookDuration = bookPlayer?.duration ?? 1
             bookPlayer?.volume = bookVolume
         }
-        if let url2 = Bundle.main.url(forResource: "music", withExtension: "mp3") {
+        if let url2 = Bundle.main.url(forResource: "music1", withExtension: "mp3") {
             musicPlayer = try? AVAudioPlayer(contentsOf: url2)
             musicPlayer?.prepareToPlay()
             musicDuration = musicPlayer?.duration ?? 1
