@@ -1,0 +1,48 @@
+# Xcode build files and user data
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
+*.ipa
+*.app
+
+# App artifacts
+*.dSYM
+*.xcarchive
+
+# Playground files
+timeline.xctimeline
+playground.xcworkspace
+
+# macOS system files
+.DS_Store
+
+# Editor/project settings (optional: add if you use these editors)
+.idea/
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Local environment (optional)
+.env
+
