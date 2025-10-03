@@ -13,6 +13,8 @@
 		E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15180D22E8F520200A20CE5 /* Preview Assets.xcassets */; };
 		E151813E2E8F950800A20CE5 /* book1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151813A2E8F950800A20CE5 /* book1.mp3 */; };
 		E151813F2E8F950800A20CE5 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151813C2E8F950800A20CE5 /* music1.mp3 */; };
+		E15181412E8F9A2900A20CE5 /* book2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181402E8F9A2900A20CE5 /* book2.mp3 */; };
+		E15181432E8F9A3100A20CE5 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181422E8F9A3100A20CE5 /* music2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		E15180D22E8F520200A20CE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E151813A2E8F950800A20CE5 /* book1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book1.mp3; sourceTree = "<group>"; };
 		E151813C2E8F950800A20CE5 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
+		E15181402E8F9A2900A20CE5 /* book2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book2.mp3; sourceTree = "<group>"; };
+		E15181422E8F9A3100A20CE5 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E151813A2E8F950800A20CE5 /* book1.mp3 */,
+				E15181402E8F9A2900A20CE5 /* book2.mp3 */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E151813C2E8F950800A20CE5 /* music1.mp3 */,
+				E15181422E8F9A3100A20CE5 /* music2.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 				E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */,
 				E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */,
 				E151813F2E8F950800A20CE5 /* music1.mp3 in Resources */,
+				E15181432E8F9A3100A20CE5 /* music2.mp3 in Resources */,
+				E15181412E8F9A2900A20CE5 /* book2.mp3 in Resources */,
 				E151813E2E8F950800A20CE5 /* book1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
