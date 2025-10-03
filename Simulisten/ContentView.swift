@@ -3,14 +3,33 @@ import AVFoundation
 
 struct ContentView: View {
     @StateObject private var audioManager = AudioManager()
-
+    
+    // Track options
+    let bookOptions = ["book1.mp3", "book2.mp3"]
+    let musicOptions = ["music1.mp3", "music2.mp3"]
+    
+    // Selection State
+    @State private var selectedBook = "book1.mp3"
+    @State private var selectedMusic = "music1.mp3"
+    
     var body: some View {
         VStack(spacing: 40) {
             // Book Controls
             VStack(spacing: 20) {
                 Text("Book Controls")
                     .font(.headline)
-
+                
+                // Book Picker
+                Picker("Book", selection: $selectedBook) {
+                    ForEach(bookOptions, id: \.self) { book in
+                        Text(book.replacingOccurrences(of: ".mp3", with: "")).tag(book)
+                    }
+                }
+                .pickerStyle(.menu)
+                .onChange(of: selectedBook) { _, newBook in
+                    audioManager.loadBook(named: newBook)
+                }
+                
                 HStack {
                     Button("Play") { audioManager.playBook() }
                     Button("Pause") { audioManager.pauseBook() }
@@ -38,12 +57,23 @@ struct ContentView: View {
                 )
                 Text(String(format: "Volume: %.2f", audioManager.bookVolume))
             }
-
+            
             // Music Controls
             VStack(spacing: 20) {
                 Text("Music Controls")
                     .font(.headline)
-
+                
+                // Music Picker
+                Picker("Music", selection: $selectedMusic) {
+                    ForEach(musicOptions, id: \.self) { music in
+                        Text(music.replacingOccurrences(of: ".mp3", with: "")).tag(music)
+                    }
+                }
+                .pickerStyle(.menu)
+                .onChange(of: selectedMusic) { _, newMusic in
+                    audioManager.loadMusic(named: newMusic)
+                }
+                
                 HStack {
                     Button("Play") { audioManager.playMusic() }
                     Button("Pause") { audioManager.pauseMusic() }
@@ -73,6 +103,10 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onAppear {
+            audioManager.loadBook(named: selectedBook)
+            audioManager.loadMusic(named: selectedMusic)
+        }
     }
 }
 
@@ -85,25 +119,34 @@ class AudioManager: ObservableObject {
     @Published var musicDuration: TimeInterval = 1
     @Published var bookVolume: Float = 1.0
     @Published var musicVolume: Float = 1.0
-
+    
     var bookTimer: Timer?
     var musicTimer: Timer?
-
-    init() {
-        if let url1 = Bundle.main.url(forResource: "book1", withExtension: "mp3") {
-            bookPlayer = try? AVAudioPlayer(contentsOf: url1)
+    
+    // Load Book by name
+    func loadBook(named name: String) {
+        stopBook()
+        if let url = Bundle.main.url(forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
+            bookPlayer = try? AVAudioPlayer(contentsOf: url)
             bookPlayer?.prepareToPlay()
             bookDuration = bookPlayer?.duration ?? 1
             bookPlayer?.volume = bookVolume
+            bookCurrentTime = 0
         }
-        if let url2 = Bundle.main.url(forResource: "music1", withExtension: "mp3") {
-            musicPlayer = try? AVAudioPlayer(contentsOf: url2)
+    }
+    
+    // Load Music by name
+    func loadMusic(named name: String) {
+        stopMusic()
+        if let url = Bundle.main.url(forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
+            musicPlayer = try? AVAudioPlayer(contentsOf: url)
             musicPlayer?.prepareToPlay()
             musicDuration = musicPlayer?.duration ?? 1
             musicPlayer?.volume = musicVolume
+            musicCurrentTime = 0
         }
     }
-
+    
     // Book Controls
     func playBook() {
         bookPlayer?.play()
@@ -138,7 +181,7 @@ class AudioManager: ObservableObject {
         bookTimer?.invalidate()
         bookTimer = nil
     }
-
+    
     // Music Controls
     func playMusic() {
         musicPlayer?.play()
