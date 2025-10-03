@@ -11,8 +11,8 @@
 		E15180CE2E8F520100A20CE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15180CD2E8F520100A20CE5 /* ContentView.swift */; };
 		E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15180CF2E8F520200A20CE5 /* Assets.xcassets */; };
 		E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15180D22E8F520200A20CE5 /* Preview Assets.xcassets */; };
-		E15181112E8F787A00A20CE5 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151810F2E8F787900A20CE5 /* music1.mp3 */; };
-		E15181132E8F852000A20CE5 /* book1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181122E8F852000A20CE5 /* book1.mp3 */; };
+		E151813E2E8F950800A20CE5 /* book1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151813A2E8F950800A20CE5 /* book1.mp3 */; };
+		E151813F2E8F950800A20CE5 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151813C2E8F950800A20CE5 /* music1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +21,8 @@
 		E15180CD2E8F520100A20CE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E15180CF2E8F520200A20CE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15180D22E8F520200A20CE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E151810F2E8F787900A20CE5 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
-		E15181122E8F852000A20CE5 /* book1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book1.mp3; sourceTree = "<group>"; };
+		E151813A2E8F950800A20CE5 /* book1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book1.mp3; sourceTree = "<group>"; };
+		E151813C2E8F950800A20CE5 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +75,26 @@
 		E151810D2E8F77FF00A20CE5 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				E15181122E8F852000A20CE5 /* book1.mp3 */,
-				E151810F2E8F787900A20CE5 /* music1.mp3 */,
+				E151813B2E8F950800A20CE5 /* Books */,
+				E151813D2E8F950800A20CE5 /* Music */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		E151813B2E8F950800A20CE5 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				E151813A2E8F950800A20CE5 /* book1.mp3 */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		E151813D2E8F950800A20CE5 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				E151813C2E8F950800A20CE5 /* music1.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,10 +155,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15181112E8F787A00A20CE5 /* music1.mp3 in Resources */,
-				E15181132E8F852000A20CE5 /* book1.mp3 in Resources */,
 				E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */,
 				E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */,
+				E151813F2E8F950800A20CE5 /* music1.mp3 in Resources */,
+				E151813E2E8F950800A20CE5 /* book1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
