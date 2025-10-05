@@ -17,7 +17,7 @@ struct ContentView: View {
             VStack(spacing: 32) {
                 // Header
                 VStack(spacing: 8) {
-                    Text("Audio Suite")
+                    Text("Simulisten")
                         .font(.largeTitle.bold())
                     Text("Advanced Book & Music Player")
                         .font(.subheadline)
