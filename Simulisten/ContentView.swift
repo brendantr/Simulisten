@@ -13,96 +13,165 @@ struct ContentView: View {
     @State private var selectedMusic = "music1.mp3"
     
     var body: some View {
-        VStack(spacing: 40) {
-            // Book Controls
-            VStack(spacing: 20) {
-                Text("Book Controls")
-                    .font(.headline)
-                
-                // Book Picker
-                Picker("Book", selection: $selectedBook) {
-                    ForEach(bookOptions, id: \.self) { book in
-                        Text(book.replacingOccurrences(of: ".mp3", with: "")).tag(book)
-                    }
+        ScrollView {
+            VStack(spacing: 32) {
+                // Header
+                VStack(spacing: 8) {
+                    Text("Audio Suite")
+                        .font(.largeTitle.bold())
+                    Text("Advanced Book & Music Player")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }
-                .pickerStyle(.menu)
-                .onChange(of: selectedBook) { _, newBook in
-                    audioManager.loadBook(named: newBook)
-                }
-                
-                HStack {
-                    Button("Play") { audioManager.playBook() }
-                    Button("Pause") { audioManager.pauseBook() }
-                    Button("Stop") { audioManager.stopBook() }
-                }
-                .buttonStyle(.bordered)
+                .padding(.top)
 
-                Slider(
-                    value: $audioManager.bookCurrentTime,
-                    in: 0...audioManager.bookDuration,
-                    onEditingChanged: { editing in
-                        if !editing {
-                            audioManager.seekBook(to: audioManager.bookCurrentTime)
+                // Book Controls
+                GroupBox(label: Label("Book Controls", systemImage: "book.closed")
+                    .font(.headline)) {
+                    VStack(spacing: 16) {
+                        Picker("Book", selection: $selectedBook) {
+                            ForEach(bookOptions, id: \.self) { book in
+                                Text(book.replacingOccurrences(of: ".mp3", with: "").capitalized)
+                                    .tag(book)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        .onChange(of: selectedBook) { _, newBook in
+                            audioManager.loadBook(named: newBook)
+                        }
+
+                        HStack(spacing: 24) {
+                            Button {
+                                audioManager.playBook()
+                            } label: {
+                                Label("Play", systemImage: "play.fill")
+                            }
+                            .buttonStyle(.borderedProminent)
+
+                            Button {
+                                audioManager.pauseBook()
+                            } label: {
+                                Label("Pause", systemImage: "pause.fill")
+                            }
+                            .buttonStyle(.bordered)
+
+                            Button {
+                                audioManager.stopBook()
+                            } label: {
+                                Label("Stop", systemImage: "stop.fill")
+                            }
+                            .buttonStyle(.bordered)
+                        }
+
+                        VStack(spacing: 10) {
+                            Slider(
+                                value: $audioManager.bookCurrentTime,
+                                in: 0...audioManager.bookDuration,
+                                onEditingChanged: { editing in
+                                    if !editing {
+                                        audioManager.seekBook(to: audioManager.bookCurrentTime)
+                                    }
+                                }
+                            )
+                            .accentColor(.blue)
+                            Text(String(format: "%.1fs / %.1fs", audioManager.bookCurrentTime, audioManager.bookDuration))
+                                .font(.caption)
+                        }
+
+                        VStack(spacing: 10) {
+                            Slider(
+                                value: $audioManager.bookVolume,
+                                in: 0...1,
+                                onEditingChanged: { _ in
+                                    audioManager.setBookVolume(audioManager.bookVolume)
+                                }
+                            )
+                            .accentColor(.green)
+                            Text(String(format: "Volume: %.2f", audioManager.bookVolume))
+                                .font(.caption2)
                         }
                     }
-                )
-                Text(String(format: "%.1fs / %.1fs", audioManager.bookCurrentTime, audioManager.bookDuration))
+                    .padding(.vertical, 8)
+                }
+                .background(Color(.systemGray6))
+                .cornerRadius(12)
+                .shadow(color: .gray.opacity(0.18), radius: 12, x: 0, y: 4)
 
-                Slider(
-                    value: $audioManager.bookVolume,
-                    in: 0...1,
-                    onEditingChanged: { _ in
-                        audioManager.setBookVolume(audioManager.bookVolume)
-                    }
-                )
-                Text(String(format: "Volume: %.2f", audioManager.bookVolume))
-            }
-            
-            // Music Controls
-            VStack(spacing: 20) {
-                Text("Music Controls")
-                    .font(.headline)
-                
-                // Music Picker
-                Picker("Music", selection: $selectedMusic) {
-                    ForEach(musicOptions, id: \.self) { music in
-                        Text(music.replacingOccurrences(of: ".mp3", with: "")).tag(music)
-                    }
-                }
-                .pickerStyle(.menu)
-                .onChange(of: selectedMusic) { _, newMusic in
-                    audioManager.loadMusic(named: newMusic)
-                }
-                
-                HStack {
-                    Button("Play") { audioManager.playMusic() }
-                    Button("Pause") { audioManager.pauseMusic() }
-                    Button("Stop") { audioManager.stopMusic() }
-                }
-                .buttonStyle(.bordered)
+                // Music Controls
+                GroupBox(label: Label("Music Controls", systemImage: "music.note")
+                    .font(.headline)) {
+                    VStack(spacing: 16) {
+                        Picker("Music", selection: $selectedMusic) {
+                            ForEach(musicOptions, id: \.self) { music in
+                                Text(music.replacingOccurrences(of: ".mp3", with: "").capitalized)
+                                    .tag(music)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                        .onChange(of: selectedMusic) { _, newMusic in
+                            audioManager.loadMusic(named: newMusic)
+                        }
 
-                Slider(
-                    value: $audioManager.musicCurrentTime,
-                    in: 0...audioManager.musicDuration,
-                    onEditingChanged: { editing in
-                        if !editing {
-                            audioManager.seekMusic(to: audioManager.musicCurrentTime)
+                        HStack(spacing: 24) {
+                            Button {
+                                audioManager.playMusic()
+                            } label: {
+                                Label("Play", systemImage: "play.fill")
+                            }
+                            .buttonStyle(.borderedProminent)
+
+                            Button {
+                                audioManager.pauseMusic()
+                            } label: {
+                                Label("Pause", systemImage: "pause.fill")
+                            }
+                            .buttonStyle(.bordered)
+
+                            Button {
+                                audioManager.stopMusic()
+                            } label: {
+                                Label("Stop", systemImage: "stop.fill")
+                            }
+                            .buttonStyle(.bordered)
+                        }
+
+                        VStack(spacing: 10) {
+                            Slider(
+                                value: $audioManager.musicCurrentTime,
+                                in: 0...audioManager.musicDuration,
+                                onEditingChanged: { editing in
+                                    if !editing {
+                                        audioManager.seekMusic(to: audioManager.musicCurrentTime)
+                                    }
+                                }
+                            )
+                            .accentColor(.purple)
+                            Text(String(format: "%.1fs / %.1fs", audioManager.musicCurrentTime, audioManager.musicDuration))
+                                .font(.caption)
+                        }
+
+                        VStack(spacing: 10) {
+                            Slider(
+                                value: $audioManager.musicVolume,
+                                in: 0...1,
+                                onEditingChanged: { _ in
+                                    audioManager.setMusicVolume(audioManager.musicVolume)
+                                }
+                            )
+                            .accentColor(.orange)
+                            Text(String(format: "Volume: %.2f", audioManager.musicVolume))
+                                .font(.caption2)
                         }
                     }
-                )
-                Text(String(format: "%.1fs / %.1fs", audioManager.musicCurrentTime, audioManager.musicDuration))
-
-                Slider(
-                    value: $audioManager.musicVolume,
-                    in: 0...1,
-                    onEditingChanged: { _ in
-                        audioManager.setMusicVolume(audioManager.musicVolume)
-                    }
-                )
-                Text(String(format: "Volume: %.2f", audioManager.musicVolume))
+                    .padding(.vertical, 8)
+                }
+                .background(Color(.systemGray6))
+                .cornerRadius(12)
+                .shadow(color: .gray.opacity(0.18), radius: 12, x: 0, y: 4)
             }
+            .padding()
+            .background(Color(.systemGroupedBackground))
         }
-        .padding()
         .onAppear {
             audioManager.loadBook(named: selectedBook)
             audioManager.loadMusic(named: selectedMusic)
@@ -119,14 +188,15 @@ class AudioManager: ObservableObject {
     @Published var musicDuration: TimeInterval = 1
     @Published var bookVolume: Float = 1.0
     @Published var musicVolume: Float = 1.0
-    
+
     var bookTimer: Timer?
     var musicTimer: Timer?
-    
+
     // Load Book by name
     func loadBook(named name: String) {
         stopBook()
-        if let url = Bundle.main.url(forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
+        if let url = Bundle.main.url(
+            forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
             bookPlayer = try? AVAudioPlayer(contentsOf: url)
             bookPlayer?.prepareToPlay()
             bookDuration = bookPlayer?.duration ?? 1
@@ -134,11 +204,12 @@ class AudioManager: ObservableObject {
             bookCurrentTime = 0
         }
     }
-    
+
     // Load Music by name
     func loadMusic(named name: String) {
         stopMusic()
-        if let url = Bundle.main.url(forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
+        if let url = Bundle.main.url(
+            forResource: name.replacingOccurrences(of: ".mp3", with: ""), withExtension: "mp3") {
             musicPlayer = try? AVAudioPlayer(contentsOf: url)
             musicPlayer?.prepareToPlay()
             musicDuration = musicPlayer?.duration ?? 1
@@ -146,7 +217,7 @@ class AudioManager: ObservableObject {
             musicCurrentTime = 0
         }
     }
-    
+
     // Book Controls
     func playBook() {
         bookPlayer?.play()
@@ -181,7 +252,7 @@ class AudioManager: ObservableObject {
         bookTimer?.invalidate()
         bookTimer = nil
     }
-    
+
     // Music Controls
     func playMusic() {
         musicPlayer?.play()
