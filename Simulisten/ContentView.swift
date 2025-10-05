@@ -5,8 +5,8 @@ struct ContentView: View {
     @StateObject private var audioManager = AudioManager()
     
     // Track options
-    let bookOptions = ["book1.mp3", "book2.mp3"]
-    let musicOptions = ["music1.mp3", "music2.mp3"]
+    let bookOptions = ["book1.mp3", "book2.mp3", "book3.mp3"]
+    let musicOptions = ["music1.mp3", "music2.mp3", "music3.mp3"]
     
     // Selection State
     @State private var selectedBook = "book1.mp3"
