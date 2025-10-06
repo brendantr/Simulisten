@@ -20,7 +20,7 @@
 		E15181572E92259A00A20CE5 /* music4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181562E92259A00A20CE5 /* music4.mp3 */; };
 		E15181592E9225A200A20CE5 /* book4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181582E9225A200A20CE5 /* book4.mp3 */; };
 		E151815B2E93762B00A20CE5 /* book5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151815A2E93762A00A20CE5 /* book5.mp3 */; };
-		E151815D2E93764000A20CE5 /* book5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151815C2E93764000A20CE5 /* book5.mp3 */; };
+		E151815F2E93772300A20CE5 /* music5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E151815E2E93772300A20CE5 /* music5.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		E15181562E92259A00A20CE5 /* music4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music4.mp3; path = ../../../../audio/audio_b/music4.mp3; sourceTree = "<group>"; };
 		E15181582E9225A200A20CE5 /* book4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book4.mp3; path = ../../../../audio/audio_a/book4.mp3; sourceTree = "<group>"; };
 		E151815A2E93762A00A20CE5 /* book5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book5.mp3; sourceTree = "<group>"; };
-		E151815C2E93764000A20CE5 /* book5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book5.mp3; sourceTree = "<group>"; };
+		E151815E2E93772300A20CE5 /* music5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music5.mp3; path = ../../../../../../Downloads/music5.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 				E15181422E8F9A3100A20CE5 /* music2.mp3 */,
 				E15181502E921BD600A20CE5 /* music3.mp3 */,
 				E15181562E92259A00A20CE5 /* music4.mp3 */,
-				E151815C2E93764000A20CE5 /* book5.mp3 */,
+				E151815E2E93772300A20CE5 /* music5.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -187,12 +187,12 @@
 				E151813F2E8F950800A20CE5 /* music1.mp3 in Resources */,
 				E15181432E8F9A3100A20CE5 /* music2.mp3 in Resources */,
 				E15181592E9225A200A20CE5 /* book4.mp3 in Resources */,
+				E151815F2E93772300A20CE5 /* music5.mp3 in Resources */,
 				E15181512E921BD600A20CE5 /* music3.mp3 in Resources */,
 				E151814B2E92176F00A20CE5 /* book3.mp3 in Resources */,
 				E15181412E8F9A2900A20CE5 /* book2.mp3 in Resources */,
 				E15181572E92259A00A20CE5 /* music4.mp3 in Resources */,
 				E151813E2E8F950800A20CE5 /* book1.mp3 in Resources */,
-				E151815D2E93764000A20CE5 /* book5.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
