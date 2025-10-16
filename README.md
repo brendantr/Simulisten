@@ -86,7 +86,7 @@ To propose changes:
 
 ## Author
 
-- [Brendan Rodriguez] –
+- [Brendan Rodriguez]
 
 ---
 
