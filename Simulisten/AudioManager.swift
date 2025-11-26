@@ -51,12 +51,43 @@ final class AudioManager: ObservableObject {
         objectWillChange.send()
     }
 
-    private func loadPlayer(named name: String) -> AVAudioPlayer? {
-        let components = name.split(separator: ".")
-        guard components.count >= 2,
-              let url = Bundle.main.url(forResource: components.dropLast().joined(separator: "."),
-                                        withExtension: String(components.last!)) else {
-            print("AudioManager: Failed to find resource \(name) in bundle.")
+    // Accept relative paths like:
+    // "Audio/Learning/Audiobooks/book1.mp3" or "Learning/Audiobooks/book1.mp3"
+    // Works with both folder references (blue) and groups (yellow) when the "Audio" directory is copied into the bundle.
+    private func loadPlayer(named path: String) -> AVAudioPlayer? {
+        // Normalize leading/trailing slashes
+        let trimmedPath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        let url: URL?
+
+        // Break into directory + filename + extension
+        let nsPath = trimmedPath as NSString
+        let fileNameWithExt = nsPath.lastPathComponent
+        let subdirectory = nsPath.deletingLastPathComponent.isEmpty ? nil : nsPath.deletingLastPathComponent
+
+        let fileNameNSString = fileNameWithExt as NSString
+        let resource = fileNameNSString.deletingPathExtension
+        let ext = fileNameNSString.pathExtension.isEmpty ? nil : fileNameNSString.pathExtension
+
+        if let ext {
+            // Preferred: use subdirectory-aware lookup for nested resources.
+            url = Bundle.main.url(
+                forResource: resource,
+                withExtension: ext,
+                subdirectory: subdirectory
+            )
+        } else {
+            // Fallback: if a full relative path was provided without extension,
+            // try to construct a URL directly from the bundle resource URL.
+            // This is mainly helpful if using a blue folder reference and calling with "Audio/.../file"
+            if let base = Bundle.main.resourceURL {
+                url = base.appendingPathComponent(trimmedPath)
+            } else {
+                url = nil
+            }
+        }
+
+        guard let url else {
+            print("AudioManager: Failed to find resource at path \(path) in bundle.")
             return nil
         }
 
@@ -65,7 +96,7 @@ final class AudioManager: ObservableObject {
             player.prepareToPlay()
             return player
         } catch {
-            print("AudioManager: Failed to init AVAudioPlayer for \(name): \(error)")
+            print("AudioManager: Failed to init AVAudioPlayer for \(path): \(error)")
             return nil
         }
     }
@@ -119,3 +150,4 @@ final class AudioManager: ObservableObject {
         if let timer { RunLoop.main.add(timer, forMode: .common) }
     }
 }
+
