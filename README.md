@@ -86,7 +86,7 @@ To propose changes:
 
 ## Author
 
-- [Your Name] – [your.email@example.com]
+- [Brendan Rodriguez]
 
 ---
 
