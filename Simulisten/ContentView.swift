@@ -15,7 +15,7 @@ struct ContentView: View {
                 VStack(spacing: 8) {
                     Text("Simulisten")
                         .font(.largeTitle.bold())
-                    Text("Advanced Book & Music Player")
+                    Text("Advanced Learning & Music Player")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
