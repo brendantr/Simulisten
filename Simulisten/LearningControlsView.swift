@@ -14,7 +14,7 @@ struct BookControlsView: View {
 
     var body: some View {
         PlayerControlsView(
-            title: "Book Controls",
+            title: "Learning Controls",
             systemImage: "book.closed",
             options: bookOptions,
             selected: $selectedBook,
