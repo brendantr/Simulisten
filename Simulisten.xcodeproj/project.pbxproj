@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E148B8682ED6A37C00227163 /* book8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E148B8672ED6A37C00227163 /* book8.mp3 */; };
 		E15180CC2E8F520100A20CE5 /* SimulistenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15180CB2E8F520100A20CE5 /* SimulistenApp.swift */; };
 		E15180CE2E8F520100A20CE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15180CD2E8F520100A20CE5 /* ContentView.swift */; };
 		E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15180CF2E8F520200A20CE5 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E148B8672ED6A37C00227163 /* book8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book8.mp3; sourceTree = "<group>"; };
 		E15180C82E8F520100A20CE5 /* Simulisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15180CB2E8F520100A20CE5 /* SimulistenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulistenApp.swift; sourceTree = "<group>"; };
 		E15180CD2E8F520100A20CE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E151815A2E93762A00A20CE5 /* book5.mp3 */,
 				E15181662E93803B00A20CE5 /* book6.mp3 */,
 				E15181672E93803C00A20CE5 /* book7.mp3 */,
+				E148B8672ED6A37C00227163 /* book8.mp3 */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E148B8682ED6A37C00227163 /* book8.mp3 in Resources */,
 				E151815B2E93762B00A20CE5 /* book5.mp3 in Resources */,
 				E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */,
 				E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */,
@@ -355,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simulisten/Preview Content\"";
@@ -385,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simulisten/Preview Content\"";
