@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E148B8682ED6A37C00227163 /* book8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E148B8672ED6A37C00227163 /* book8.mp3 */; };
 		E148B86E2ED6AC8F00227163 /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148B86D2ED6AC8D00227163 /* PlayerControlsView.swift */; };
-		E148B8702ED6ACDE00227163 /* BookControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148B86F2ED6ACDC00227163 /* BookControlsView.swift */; };
+		E148B8702ED6ACDE00227163 /* LearningControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148B86F2ED6ACDC00227163 /* LearningControlsView.swift */; };
 		E148B8722ED6ACED00227163 /* MusicControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148B8712ED6ACE500227163 /* MusicControlsView.swift */; };
 		E148B8782ED6AED800227163 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148B8772ED6AED800227163 /* AudioManager.swift */; };
 		E15180CC2E8F520100A20CE5 /* SimulistenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15180CB2E8F520100A20CE5 /* SimulistenApp.swift */; };
@@ -31,12 +31,23 @@
 		E15181652E93803400A20CE5 /* music8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181622E93803400A20CE5 /* music8.mp3 */; };
 		E15181682E93803C00A20CE5 /* book6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181662E93803B00A20CE5 /* book6.mp3 */; };
 		E15181692E93803C00A20CE5 /* book7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E15181672E93803C00A20CE5 /* book7.mp3 */; };
+		E16E96522ED8AED200B5B146 /* book14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964C2ED8AED200B5B146 /* book14.mp3 */; };
+		E16E96532ED8AED200B5B146 /* book15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964D2ED8AED200B5B146 /* book15.mp3 */; };
+		E16E96542ED8AED200B5B146 /* book17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964F2ED8AED200B5B146 /* book17.mp3 */; };
+		E16E96552ED8AED200B5B146 /* book16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964E2ED8AED200B5B146 /* book16.mp3 */; };
+		E16E96562ED8AED200B5B146 /* book9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E96472ED8AED200B5B146 /* book9.mp3 */; };
+		E16E96572ED8AED200B5B146 /* book13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964B2ED8AED200B5B146 /* book13.mp3 */; };
+		E16E96582ED8AED200B5B146 /* book18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E96502ED8AED200B5B146 /* book18.mp3 */; };
+		E16E96592ED8AED200B5B146 /* book19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E96512ED8AED200B5B146 /* book19.mp3 */; };
+		E16E965A2ED8AED200B5B146 /* book11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E96492ED8AED200B5B146 /* book11.mp3 */; };
+		E16E965B2ED8AED200B5B146 /* book10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E96482ED8AED200B5B146 /* book10.mp3 */; };
+		E16E965C2ED8AED200B5B146 /* book12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E16E964A2ED8AED200B5B146 /* book12.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E148B8672ED6A37C00227163 /* book8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book8.mp3; sourceTree = "<group>"; };
 		E148B86D2ED6AC8D00227163 /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
-		E148B86F2ED6ACDC00227163 /* BookControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookControlsView.swift; sourceTree = "<group>"; };
+		E148B86F2ED6ACDC00227163 /* LearningControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningControlsView.swift; sourceTree = "<group>"; };
 		E148B8712ED6ACE500227163 /* MusicControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlsView.swift; sourceTree = "<group>"; };
 		E148B8772ED6AED800227163 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		E15180C82E8F520100A20CE5 /* Simulisten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulisten.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +71,17 @@
 		E15181622E93803400A20CE5 /* music8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music8.mp3; sourceTree = "<group>"; };
 		E15181662E93803B00A20CE5 /* book6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book6.mp3; sourceTree = "<group>"; };
 		E15181672E93803C00A20CE5 /* book7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = book7.mp3; sourceTree = "<group>"; };
+		E16E96472ED8AED200B5B146 /* book9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book9.mp3; path = /Users/brendanrodriguez/Downloads/book9.mp3; sourceTree = "<absolute>"; };
+		E16E96482ED8AED200B5B146 /* book10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book10.mp3; path = /Users/brendanrodriguez/Downloads/book10.mp3; sourceTree = "<absolute>"; };
+		E16E96492ED8AED200B5B146 /* book11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book11.mp3; path = /Users/brendanrodriguez/Downloads/book11.mp3; sourceTree = "<absolute>"; };
+		E16E964A2ED8AED200B5B146 /* book12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book12.mp3; path = /Users/brendanrodriguez/Downloads/book12.mp3; sourceTree = "<absolute>"; };
+		E16E964B2ED8AED200B5B146 /* book13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book13.mp3; path = /Users/brendanrodriguez/Downloads/book13.mp3; sourceTree = "<absolute>"; };
+		E16E964C2ED8AED200B5B146 /* book14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book14.mp3; path = /Users/brendanrodriguez/Downloads/book14.mp3; sourceTree = "<absolute>"; };
+		E16E964D2ED8AED200B5B146 /* book15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book15.mp3; path = /Users/brendanrodriguez/Downloads/book15.mp3; sourceTree = "<absolute>"; };
+		E16E964E2ED8AED200B5B146 /* book16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book16.mp3; path = /Users/brendanrodriguez/Downloads/book16.mp3; sourceTree = "<absolute>"; };
+		E16E964F2ED8AED200B5B146 /* book17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book17.mp3; path = /Users/brendanrodriguez/Downloads/book17.mp3; sourceTree = "<absolute>"; };
+		E16E96502ED8AED200B5B146 /* book18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book18.mp3; path = /Users/brendanrodriguez/Downloads/book18.mp3; sourceTree = "<absolute>"; };
+		E16E96512ED8AED200B5B146 /* book19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book19.mp3; path = /Users/brendanrodriguez/Downloads/book19.mp3; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +118,7 @@
 				E151810D2E8F77FF00A20CE5 /* Audio */,
 				E15180CB2E8F520100A20CE5 /* SimulistenApp.swift */,
 				E148B86D2ED6AC8D00227163 /* PlayerControlsView.swift */,
-				E148B86F2ED6ACDC00227163 /* BookControlsView.swift */,
+				E148B86F2ED6ACDC00227163 /* LearningControlsView.swift */,
 				E148B8712ED6ACE500227163 /* MusicControlsView.swift */,
 				E15180CD2E8F520100A20CE5 /* ContentView.swift */,
 				E148B8772ED6AED800227163 /* AudioManager.swift */,
@@ -117,13 +139,13 @@
 		E151810D2E8F77FF00A20CE5 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				E151813B2E8F950800A20CE5 /* Books */,
+				E151813B2E8F950800A20CE5 /* Learning */,
 				E151813D2E8F950800A20CE5 /* Music */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		E151813B2E8F950800A20CE5 /* Books */ = {
+		E151813B2E8F950800A20CE5 /* Learning */ = {
 			isa = PBXGroup;
 			children = (
 				E151813A2E8F950800A20CE5 /* book1.mp3 */,
@@ -134,8 +156,19 @@
 				E15181662E93803B00A20CE5 /* book6.mp3 */,
 				E15181672E93803C00A20CE5 /* book7.mp3 */,
 				E148B8672ED6A37C00227163 /* book8.mp3 */,
+				E16E96472ED8AED200B5B146 /* book9.mp3 */,
+				E16E96482ED8AED200B5B146 /* book10.mp3 */,
+				E16E96492ED8AED200B5B146 /* book11.mp3 */,
+				E16E964A2ED8AED200B5B146 /* book12.mp3 */,
+				E16E964B2ED8AED200B5B146 /* book13.mp3 */,
+				E16E964C2ED8AED200B5B146 /* book14.mp3 */,
+				E16E964D2ED8AED200B5B146 /* book15.mp3 */,
+				E16E964E2ED8AED200B5B146 /* book16.mp3 */,
+				E16E964F2ED8AED200B5B146 /* book17.mp3 */,
+				E16E96502ED8AED200B5B146 /* book18.mp3 */,
+				E16E96512ED8AED200B5B146 /* book19.mp3 */,
 			);
-			path = Books;
+			path = Learning;
 			sourceTree = "<group>";
 		};
 		E151813D2E8F950800A20CE5 /* Music */ = {
@@ -212,6 +245,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E148B8682ED6A37C00227163 /* book8.mp3 in Resources */,
+				E16E96522ED8AED200B5B146 /* book14.mp3 in Resources */,
+				E16E96532ED8AED200B5B146 /* book15.mp3 in Resources */,
+				E16E96542ED8AED200B5B146 /* book17.mp3 in Resources */,
+				E16E96552ED8AED200B5B146 /* book16.mp3 in Resources */,
+				E16E96562ED8AED200B5B146 /* book9.mp3 in Resources */,
+				E16E96572ED8AED200B5B146 /* book13.mp3 in Resources */,
+				E16E96582ED8AED200B5B146 /* book18.mp3 in Resources */,
+				E16E96592ED8AED200B5B146 /* book19.mp3 in Resources */,
+				E16E965A2ED8AED200B5B146 /* book11.mp3 in Resources */,
+				E16E965B2ED8AED200B5B146 /* book10.mp3 in Resources */,
+				E16E965C2ED8AED200B5B146 /* book12.mp3 in Resources */,
 				E151815B2E93762B00A20CE5 /* book5.mp3 in Resources */,
 				E15180D32E8F520200A20CE5 /* Preview Assets.xcassets in Resources */,
 				E15180D02E8F520200A20CE5 /* Assets.xcassets in Resources */,
@@ -244,7 +288,7 @@
 				E15180CC2E8F520100A20CE5 /* SimulistenApp.swift in Sources */,
 				E148B8722ED6ACED00227163 /* MusicControlsView.swift in Sources */,
 				E148B86E2ED6AC8F00227163 /* PlayerControlsView.swift in Sources */,
-				E148B8702ED6ACDE00227163 /* BookControlsView.swift in Sources */,
+				E148B8702ED6ACDE00227163 /* LearningControlsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
